@@ -95,9 +95,9 @@ service:
 
 ```
     handler: index.handler
-    cron:  # Setup scheduled trigger with cron expression
-      active: true
-      value: '30 00 * * *'
+    events:  
+        -schedule:
+            rate: cron(30 00 * * ? *)
 ```      
 
 4. Deploy the code using serverless
