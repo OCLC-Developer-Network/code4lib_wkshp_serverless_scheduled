@@ -83,13 +83,29 @@ serverless invoke local --function getFilesViaSFTP --path scheduled_event.json
 ##Installing in AWS Lambda
 
 1. Download and setup the application, see Installing locally
-2. Deploy the code using serverless
+2. Edit serverless.yml so it include your key ARN
+
+```
+service: 
+    name: schedule-example
+    awsKmsKeyArn: arn:aws:kms:us-east-1:XXXXXX:key/some-hash
+```
+
+3. Setup the schedule. Edit the serverless.yml file and add a configuration with a crontab expression. Example below runs at 00:30 every day.
+
+```
+    handler: index.handler
+    cron:  # Setup scheduled trigger with cron expression
+      active: true
+      value: '30 00 * * *'
+```      
+
+4. Deploy the code using serverless
 
 ```bash
 $ serverless deploy
 ```
 
-3. Make sure the role for the Lambda has the right permissions
+5. Make sure the role for the Lambda has the right permissions
 - KMS decrypt
 - S3 write
-4. Setup the schedule
