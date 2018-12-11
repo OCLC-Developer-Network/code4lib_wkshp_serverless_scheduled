@@ -1,0 +1,5 @@
+host: sftp.host.address
+username: username
+bucket: sftp-bucket
+path: "path/to/file"
+file: "filename.txt"
