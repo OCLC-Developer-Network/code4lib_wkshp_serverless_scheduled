@@ -44,7 +44,7 @@ exports.handler = async(event) => {
 							return { status: 'success' }
 						}
 					});
-			    
+					sftp.end();
 			    })
 			})	
 		    .catch((err) => {
