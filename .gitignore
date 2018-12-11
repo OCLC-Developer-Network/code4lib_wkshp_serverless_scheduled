@@ -3,3 +3,4 @@
 /rsa_id_encrypted
 /.project
 /node_modules/
+/.serverless/
