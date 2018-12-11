@@ -1,0 +1,13 @@
+service: 
+    name: schedule-example
+provider:
+ name: aws
+ runtime: nodejs8.10
+ memorySize: 128
+ timeout: 10
+ stage: production
+ region: us-east-1
+
+functions:
+    getFilesViaSFTP: 
+        handler: index.handler
