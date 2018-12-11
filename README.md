@@ -1,8 +1,8 @@
-#Scheduled Lambda
+# Scheduled Lambda
 
 Custom application which copies a file from an SFTP server to S3 bucket
 
-##Installing Locally
+## Installing Locally
 
 ### Step 1: Clone the repository
 Clone this repository
