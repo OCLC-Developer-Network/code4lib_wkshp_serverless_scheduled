@@ -28,7 +28,7 @@ exports.handler = async(event) => {
 		const sftp = new Client();
 		
 		sftp.connect(sftp_config).then(() => {
-			sftp.get(config['path'] + '/' + config['file']).then((data) => {
+			sftp.get(config['path'] + config['file']).then((data) => {
 				let body = '';
 			    data.on('data', (chunk) => {
 			        body += chunk;
