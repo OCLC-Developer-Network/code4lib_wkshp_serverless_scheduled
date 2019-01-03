@@ -14,7 +14,7 @@ or download directly from GitHub.
 
 Change into the application directory
 
-### Step 2: Use npm
+### Step 2: Use npm to install dependencies
 Download node and npm and use the `install` command to read the dependencies JSON file 
 
 ```bash
