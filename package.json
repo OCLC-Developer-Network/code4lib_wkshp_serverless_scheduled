@@ -19,7 +19,7 @@
     "serverless": "^1.34.1"
   },
   "dependencies": {
-    "aws-sdk": "^2.373.0",
+    "aws-sdk": "^2.814.0",
     "js-yaml": "^3.10.0",
     "ssh2-sftp-client": "^2.1.1"
   }
